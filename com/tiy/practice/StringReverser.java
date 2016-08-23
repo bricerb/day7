@@ -11,39 +11,32 @@ public class StringReverser {
 
     public static void reverser() throws Exception{
         Scanner inputScanner = new Scanner(System.in);
-        boolean loop = true;
 
-        while (loop) {
-            System.out.println("\n0. Main Menu");
-            System.out.println("1. Reverse a String");
-            int userChoice = Integer.valueOf(inputScanner.nextLine());
+        while (true) {
+            System.out.println("#####  String Reverser #####\n");
+            System.out.println("type exit to return to previous menu");
+            System.out.println("String to be reversed: ");
+            String userString = inputScanner.nextLine();
+            if (userString.equals("exit")) {
+                break;
+            }
+            //Takes user String
 
-            if (userChoice == 0) {
-                loop = false;
-            } else if (userChoice == 1){
+            char[] stringChars = userString.toCharArray();
 
-                System.out.println("String to be reversed: ");
-                String userString = inputScanner.nextLine();
+            //Converts String to Characters
 
-                //Takes user String
+            int arrayEnd = 1;
+            int reverser = stringChars.length - arrayEnd;
 
-                char[] stringChars = userString.toCharArray();
+            // Loops from end of array to beginning by using array.length - 1 (last element).
+            // Increases arrayEnd by 1 each time the loop runs to get the previous element in the array.
 
-                //Converts String to Characters
-
-                int arrayEnd = 1;
-                int reverser = stringChars.length - arrayEnd;
-
-                // Loops from end of array to beginning by using array.length - 1 (last element).
-                // Increases arrayEnd by 1 each time the loop runs to get the previous element in the array.
-
-                while (reverser >= 0) {
-                    System.out.print(stringChars[reverser]);
-                    reverser--;
-                }
-                System.out.println("\n");
-            } else {
-                System.out.println("Invalid Input");
+            while (reverser >= 0) {
+                System.out.print(stringChars[reverser]);
+                reverser--;
+            }
+            System.out.println("\n");
             }
         }
     }
@@ -65,4 +58,3 @@ public class StringReverser {
 //            }
             // Possibly a way to user negative values to count up to 0 to find element.
 //    }
-}

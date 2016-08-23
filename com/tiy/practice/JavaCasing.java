@@ -9,24 +9,23 @@ public class JavaCasing {
 
     public static void javaCase() throws Exception {
         Scanner inputScanner = new Scanner(System.in);
-        boolean loop = true;
 
-        while (loop) {
+        while (true) {
             System.out.println();
-            System.out.println("0. Exit");
-            System.out.println("1. Reverse a String");
-            int userChoice = Integer.valueOf(inputScanner.nextLine());
-            System.out.println();
+            System.out.println("Type exit to return to main menu");
             System.out.println("Enter a string to be converted to proper Java format : ");
             String userString = inputScanner.nextLine();
             System.out.println();
+            if (userString.equals("exit")) {
+                break;
+            }
 //            String userString = "Test String To JAVA";
 
             System.out.println("1. Is it a Variable?");
             System.out.println("2. Is it a Method?");
             System.out.println("3. Is it a Class?");
 
-            userChoice = Integer.valueOf(inputScanner.nextLine());
+            int userChoice = Integer.valueOf(inputScanner.nextLine());
 
             if (userChoice == 1) {
                 String[] parts = userString.split(" ");
@@ -42,7 +41,7 @@ public class JavaCasing {
 
                 // allows me to create an array of chars to evaluate what needs to be done to each substring.
 
-                while (indexLocation < stringToChar.length) {
+                while (indexLocation <= part.length()) {
                     part = parts[indexLocation];
                     System.out.print(part.substring(0, 1).toUpperCase());
                     System.out.print(part.substring(1).toLowerCase());
@@ -63,7 +62,7 @@ public class JavaCasing {
 
                 // allows me to create an array of chars to evaluate what needs to be done to each substring.
 
-                while (indexLocation < stringToChar.length) {
+                while (indexLocation <= part.length()) {
                     part = parts[indexLocation];
                     System.out.print(part.substring(0, 1).toUpperCase());
                     System.out.print(part.substring(1).toLowerCase());
@@ -81,7 +80,7 @@ public class JavaCasing {
 
                 // allows me to create an array of chars to evaluate what needs to be done to each substring.
 
-                while (indexLocation < stringToChar.length) {
+                while (indexLocation <= part.length()) {
                     part = parts[indexLocation];
                     System.out.print(part.substring(0, 1).toUpperCase());
                     System.out.print(part.substring(1).toLowerCase());
