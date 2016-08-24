@@ -41,13 +41,12 @@ public class JavaCasing {
 
                 // allows me to create an array of chars to evaluate what needs to be done to each substring.
 
-                while (indexLocation <= part.length()) {
-                    part = parts[indexLocation];
-                    System.out.print(part.substring(0, 1).toUpperCase());
-                    System.out.print(part.substring(1).toLowerCase());
-                    indexLocation++;
-                }
-
+                    while (indexLocation < parts.length) {
+                        part = parts[indexLocation];
+                        System.out.print(part.substring(0, 1).toUpperCase());
+                        System.out.print(part.substring(1).toLowerCase());
+                        indexLocation++;
+                    }
             } else if (userChoice == 2) {
                 String[] parts = userString.split(" ");
 
@@ -62,13 +61,14 @@ public class JavaCasing {
 
                 // allows me to create an array of chars to evaluate what needs to be done to each substring.
 
-                while (indexLocation <= part.length()) {
+                while (indexLocation < parts.length) {
                     part = parts[indexLocation];
                     System.out.print(part.substring(0, 1).toUpperCase());
                     System.out.print(part.substring(1).toLowerCase());
                     indexLocation++;
                 }
                 System.out.println("()");
+
             } else if (userChoice == 3) {
                 String[] parts = userString.split(" ");
 
@@ -80,12 +80,12 @@ public class JavaCasing {
 
                 // allows me to create an array of chars to evaluate what needs to be done to each substring.
 
-                while (indexLocation <= part.length()) {
-                    part = parts[indexLocation];
-                    System.out.print(part.substring(0, 1).toUpperCase());
-                    System.out.print(part.substring(1).toLowerCase());
-                    indexLocation++;
-                }
+                    while (indexLocation < parts.length) {
+                        part = parts[indexLocation];
+                        System.out.print(part.substring(0, 1).toUpperCase());
+                        System.out.print(part.substring(1).toLowerCase());
+                        indexLocation++;
+                    }
                 System.out.println("{}");
             } else {
                 System.out.println("Invalid Input. Please try again.");
